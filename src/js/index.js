@@ -37,7 +37,9 @@ function render(variables = {}) {
     variables.lastname === null ? "Lastname" : variables.lastname
   }</h1>
           <h2>${variables.role === null ? "Role" : variables.role}</h2>
-          <h3>${variables.city }, ${variables.country}</h3>
+          <h3>${variables.city === null ? "City" : variables.city}, ${
+    variables.country === null ? "Country" : variables.country
+  }</h3>
           <ul class="${variables.socialMediaPosition}">
             <li><a href="https://twitter.com/${
               variables.twitter
@@ -66,7 +68,8 @@ window.onload = function() {
     // this is the url of the image that will used as background for the profile cover
     background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://image.freepik.com/vector-gratis/dibujos-animados-cara-hombre-joven_18591-44460.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
